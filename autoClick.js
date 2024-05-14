@@ -8,7 +8,6 @@ const puppeteer = require('puppeteer');
 
   const clickButton = async () => {
     try {
-      // Wait for the button to be available and click it
       await page.waitForSelector('button', { visible: true });
       const buttons = await page.$$('button');
       for (let button of buttons) {
